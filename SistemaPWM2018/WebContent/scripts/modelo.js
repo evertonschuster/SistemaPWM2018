@@ -1,51 +1,57 @@
-function goNew() {
-	window.location.href = "./manterModelo.jsp";
-}
+		
+		function clean() {
+			document.getElementById("newAction").value = "clean";
+			document.getElementById("form").submit();
+		}
+	
+		function detail(id) {
+			document.getElementById("newAction").value = "detail";
+			document.getElementById("id").value = id;
+			document.getElementById("form").submit();
+		}
+	
+		function removeList(id) {
+			if (confirm("Confirma a Exclusão?")) {
+				document.getElementById("newAction").value = "remove";
+				document.getElementById("id").value = id;
+				document.getElementById("form").submit();
+			}
+		}
+		
+		function find() {
+			document.getElementById("newAction").value = "find";
+			document.getElementById("form").submit();
+		}
+		
+		function goNew() {
+			document.getElementById("newAction").value = "goNew";
+			document.getElementById("form").submit();;			
+		}	
+		
+		function validate() {
+			if (document.getElementById("descricao").value == "") {
+				alert("Preencha a Descrição!");
+				document.getElementById("descricao").focus();
+				return false;
+			}
+			return true;
+		}
+	
+		function save() {
+			if (validate()) {
+				document.getElementById("newAction").value = "save";
+				document.getElementById("form").submit();
+			}
+		}
 
-function goFind() {
-	window.location.href = "./consultarModelo.jsp";
-}
-
-function cleanFind() {
-	window.location.href = "./consultarModelo.jsp";
-}
-
-function cleanDetail() {
-	window.location.href = "./ManterModelo.jsp";
-}
-
-function save() {
-	document.getElementById('newAction').value = 'save';
-	document.getElementById('form').action = "./manterModelo.jsp";
-	document.getElementById('form').submit();
-}
-
-function detail(id) {
-	document.getElementById('id').value = id;
-	document.getElementById('newAction').value = 'detail';
-	document.getElementById('form').action = "./manterModelo.jsp";
-	document.getElementById('form').submit();
-} 
-
-function remove() {
-	if (confirm('Deseja Excluir?')) {
-		document.getElementById('newAction').value = 'remove';
-		document.getElementById('form').action = "./manterModelo.jsp";
-		document.getElementById('form').submit();
-	}
-}
-
-function removeList(id) {
-	if (confirm('Deseja Excluir?')) {
-		document.getElementById('id').value = id;
-		document.getElementById('newAction').value = 'removeList';
-		document.getElementById('form').action = "./consultarModelo.jsp";
-		document.getElementById('form').submit();
-	}
-}
-
-function find() {
-	document.getElementById('newAction').value = 'find';
-	document.getElementById('form').action = "./consultarModelo.jsp";
-	document.getElementById('form').submit();
-}
+		function remove() {
+			if (confirm("Confirma a Exclusão?")) {
+				document.getElementById("newAction").value = "remove";
+				document.getElementById("form").submit();
+			}
+		}
+		
+		function goFind() {
+			document.getElementById("newAction").value = "goFind";
+			document.getElementById("form").submit();;			
+		}
