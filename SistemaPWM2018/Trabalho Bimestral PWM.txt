@@ -1,0 +1,32 @@
+﻿Trabalho Bimestral IAV
+
+Valor: 50% da nota Bimestral
+Entrega 28/11/2018
+Apresenta��o: 28/11/2018 em sala (somente para o professor)
+Individual
+
+Descri��o:
+
+Utilizando a arquitetura java proposta em sala e nas video aulas implementar os seguintes casos de uso:
+
+-1. Manter Marca (C�digo* e Descri��o*);
+-2. Manter Modelo (C�digo*, Descri��o* e MARCA*);
+-3. Manter Ve�culo (C�digo*, Nome*, Placas*, Chassis, MODELO* e CLIENTE*);
+-4. Manter Cliente (C�digo*, Nome*, CPF*, RG e Email);
+-5. Manter Funcionario (C�digo*, Nome*, CPF*, RG, Email e Salario*);
+-6. Manter Servico (C�digo*, Descri��o*, Valor*);
+-7. Manter OS (C�digo*, VE�CULO*, SERVI�OS*, FUNCION�RIO*, Quantidades*, Valores*, Data*, ValorTotal* e Status);
+-8. Manter Usu�rio (C�digo*, Nome*, Email*, Senha*, Confirmar Senha* e Perfil (Consulta ou Administrador);
+
+9. Autenticar Usu�rio (Login no Sistema);
+10. Alterar a Senha do Usu�rio;
+11. Efetuar logout do sistema
+
+* Campos Obrigat�rios
+A. Status da OS: Em Execu��o; Finalizada; Cancelada.
+B. Validar todos os campos e avisar se estiverem errados, solicitando digitar novamente. Ex: 
+N�mero devem ser n�meros, datas devem ser datas e assim sucessivamente. Validar Email, CPF, RG e CNPJ. Quando um n�o � obrigat�rio somente validar se n�o estiver vazio.
+C. O usu�rio com o perfil consulta somente ter� acesso a consultar dados no sistema, o usu�rio Administrador ter� acesso total.
+D. O sistema somente poder� executar a��es (exceto o login) com um usu�rio autenticado no sistema.
+
+Maiores detalhes em aula.
