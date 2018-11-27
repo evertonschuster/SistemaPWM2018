@@ -51,7 +51,7 @@ public class Dispatcher extends HttpServlet {
 						controllerClass = Class.forName("br.edu.udc.sistemas.pwm2018.controller.Controller" + oldEntityName);
 						controller = (Controller) controllerClass.getConstructor().newInstance();
 						nextPage = controller.execute(request,oldAction);
-						
+		
 					}
 					
 					RequestDispatcher page = request.getRequestDispatcher(nextPage);  

@@ -6,6 +6,8 @@ import java.util.HashMap;
 
 import javax.servlet.http.HttpServletRequest;
 
+import br.edu.udc.sistemas.pwm2018.entity.Usuario;
+
 public abstract class Controller {
 
 	protected String entityName;
@@ -71,17 +73,28 @@ public abstract class Controller {
 		Object objReturn = null;
 		try {
 			Method sessionMethod = sessionClass.getMethod(this.action, Object.class);
+			
+			//goNew
+			Usuario user =(Usuario)request.getSession().getAttribute("login");
+			if((user != null && !user.getPerfil().equalsIgnoreCase("Administrador")) && (this.action.equals("save")  || this.action.equals("goNew") || this.action.equals("remove"))  ) 
+			{
+				throw new Exception("Usuario nao autorizado");
+			}
+			
+			
 			if (objId != null) {
 				objReturn = sessionMethod.invoke(session, objId);
 			} else {
 				objReturn = sessionMethod.invoke(session, this.obj);
 			}
-
+		
 			if (objFilter != null) {
 				this.action = "find";
 				sessionMethod = sessionClass.getMethod(this.action, Object.class);
 				objReturn = sessionMethod.invoke(session, objFilter);
 			}
+		
+			
 
 			Method controllerMethod = this.getClass().getMethod(this.action, Object.class);
 			controllerMethod.invoke(this, objReturn);
