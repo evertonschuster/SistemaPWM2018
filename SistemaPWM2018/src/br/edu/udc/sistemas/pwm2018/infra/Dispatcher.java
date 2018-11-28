@@ -44,7 +44,7 @@ public class Dispatcher extends HttpServlet {
 	
 					String oldAction = (String)request.getSession().getAttribute("action");
 					String oldEntityName = (String) request.getSession().getAttribute("entityName");
-					if(!nextPage.equals("index.jsp") && oldAction != null && oldEntityName != null ) {
+					if(!nextPage.equals("index.jsp") && !action.equalsIgnoreCase("login") && oldAction != null && oldEntityName != null ) {
 						request.getSession().setAttribute("action",null);
 						request.getSession().setAttribute("entityName",null);
 						
@@ -62,8 +62,9 @@ public class Dispatcher extends HttpServlet {
 				}
 			//precisa enviar para tela de login
 			}else {
-				HttpServletRequestWrapper wrapper = new HttpServletRequestWrapper(request);
-				request.getSession().setAttribute("wrapper",wrapper);
+				
+				
+				request.getSession().setAttribute("login", null);
 				
 				request.getSession().setAttribute("action",action);
 				request.getSession().setAttribute("entityName",entityName);

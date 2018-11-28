@@ -1,1 +1,1 @@
-[[{"location":"C:\\Program Files\\apache-tomcat-9.0.11\\lib\\servlet-api.jar","type":"JAR","hints":{}},"TOMCAT_9_0_11:TOMCAT_9_0_11:0.0.0"],[{"location":"C:\\Program Files\\apache-tomcat-9.0.11\\lib\\catalina.jar","type":"JAR","hints":{}},"TOMCAT_9_0_11:TOMCAT_9_0_11:0.0.0"]]
+[[{"location":"C:\\Program Files\\apache-tomcat-9.0.11\\lib\\servlet-api.jar","type":"JAR","hints":{}},"TOMCAT_9_0_11:TOMCAT_9_0_11:0.0.0"],[{"location":"C:\\Program Files\\Java\\jre1.8.0_181","type":"JRE","hints":{}},"jre:jre:1.8.0"]]
